@@ -6,6 +6,8 @@ The icons are from: [Lucide Icons](https://lucide.dev/)
 
 You can access the live project [here](https://timer.joaosantiago.com.br).
 
+The design was inspirated on the [Rocketseat](rocketseat.com.br) Ignite Timer.
+
 ## How to run locally
 
 ### Clone the repository.

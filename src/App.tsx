@@ -4,6 +4,8 @@ import Button from "./components/button"
 import Countdown from "./components/countdown"
 import Header from "./components/header"
 
+import beepSound from "./assets/beep.mp3"
+
 import "./global.css"
 
 function App() {
@@ -53,6 +55,14 @@ function App() {
   function stopLoop(interval: number) {
     clearInterval(interval)
     setLoop(null)
+
+    const audio = new Audio(beepSound)
+    audio.loop = true
+    audio.play()
+
+    setTimeout(() => {
+      audio.loop = false
+    }, 5000)
   }
 
   function startLoop() {
