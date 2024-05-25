@@ -55,7 +55,9 @@ function App() {
   function stopLoop(interval: number) {
     clearInterval(interval)
     setLoop(null)
+  }
 
+  function playBeepSound() {
     const audio = new Audio(beepSound)
     audio.loop = true
     audio.play()
@@ -71,6 +73,7 @@ function App() {
 
       if (time.join("") == "0000") {
         stopLoop(interval)
+        playBeepSound()
       }
     }, 1000)
 
@@ -87,7 +90,7 @@ function App() {
 
   return (
     <div className="bg-background h-screen flex justify-center items-center px-40 py-20 font-roboto">
-      <div className="max-w-[1120px] max-h-[744px] size-full rounded-lg flex justify-center items-center">
+      <div className="max-w-[1120px] max-h-[744px] size-full flex justify-center items-center">
         <div className="flex flex-col items-center justify-between gap-10">
           <Header />
           <Countdown time={time} onTimeChange={handleTimeChange} isRunning={!!loop} />
