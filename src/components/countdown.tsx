@@ -22,13 +22,13 @@ export default function Countdown({ time, onTimeChange, isRunning }: Props) {
     }
 
     return (
-        <div className="w-full max-h-[200px] flex justify-between items-center font-roboto-mono">
+        <div className="w-full max-h-[200px] flex justify-between items-center font-roboto-mono medium:justify-center">
             <div className="flex gap-4">
-                <div className="bg-card flex justify-center items-center p-8 rounded-lg">
+                <div className="bg-card flex justify-center items-center p-8 rounded-lg small:p-4">
                     <input
                         id="input-0"
                         type="text"
-                        className="bg-transparent w-[60px] text-white text-center text-[100px] outline-none"
+                        className="bg-transparent w-[60px] text-white text-center text-[100px] outline-none large:text-[50px] large:w-[30px] medium:text-[25px] medium:w-[15px] small:text-[25px] small:w-[15px]"
                         value={time[0]}
                         onChange={(e) => handleTimeChange(e, 0)}
                         maxLength={1}
@@ -38,11 +38,11 @@ export default function Countdown({ time, onTimeChange, isRunning }: Props) {
                     />
                 </div>
 
-                <div className="bg-card flex justify-center items-center p-8 rounded-lg">
+                <div className="bg-card flex justify-center items-center p-8 rounded-lg small:p-4">
                     <input
                         id="input-1"
                         type="text"
-                        className="bg-transparent w-[60px] text-white text-center text-[100px] outline-none"
+                        className="bg-transparent w-[60px] text-white text-center text-[100px] outline-none large:text-[50px] large:w-[30px] medium:text-[25px] medium:w-[15px] small:text-[25px] small:w-[15px]"
                         value={time[1]}
                         onChange={(e) => handleTimeChange(e, 1)}
                         maxLength={1}
@@ -52,14 +52,14 @@ export default function Countdown({ time, onTimeChange, isRunning }: Props) {
                 </div>
             </div>
 
-            <span className="text-green text-[100px]">:</span>
+            <span className="text-green text-[100px] medium:text-[60px] small:text-[30px]">:</span>
 
             <div className="flex gap-4">
-                <div className="bg-card flex justify-center items-center p-8 rounded-lg">
+                <div className="bg-card flex justify-center items-center p-8 rounded-lg small:p-4">
                     <input
                         id="input-2"
                         type="text"
-                        className="bg-transparent w-[60px] text-white text-center text-[100px] outline-none"
+                        className="bg-transparent w-[60px] text-white text-center text-[100px] outline-none large:text-[50px] large:w-[30px] medium:text-[25px] medium:w-[15px] small:text-[25px] small:w-[15px]"
                         value={time[2]} 
                         onChange={(e) => handleTimeChange(e, 2)}
                         maxLength={1}
@@ -68,11 +68,11 @@ export default function Countdown({ time, onTimeChange, isRunning }: Props) {
                     />
                 </div>
                 
-                <div className="bg-card flex justify-center items-center p-8 rounded-lg">
+                <div className="bg-card flex justify-center items-center p-8 rounded-lg small:p-4">
                     <input
                         id="input-3"
                         type="text"
-                        className="bg-transparent w-[60px] text-white text-center text-[100px] outline-none" 
+                        className="bg-transparent w-[60px] text-white text-center text-[100px] outline-none large:text-[50px] large:w-[30px] medium:text-[25px] medium:w-[15px] small:text-[25px] small:w-[15px]" 
                         value={time[3]}
                         onChange={(e) => handleTimeChange(e, 3)}
                         maxLength={1}

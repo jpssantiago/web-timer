@@ -19,6 +19,11 @@ export default {
         "roboto": ["Roboto", "sans-serif"]
       }
     },
+    screens: {
+      small: { max : "430px" },
+      medium: { min: "430px", max: "600px" },
+      large: { min: "600px", max: "750px" }
+    }
   },
   plugins: [],
 }
