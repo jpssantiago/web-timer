@@ -21,20 +21,23 @@ export default function Timer() {
     return (
         <div className="flex items-center justify-between gap-4">
             {time.map((item, index) => (
-                <div key={index} className={`bg-card w-[150px] h-[187px] flex items-center rounded-lg border-2 border-card focus-within:border-dark-green ${"order-" + (index + 1)}`}>
-                    <input
-                        type="text"
-                        className="w-full font-bold text-center text-white bg-transparent outline-none text-9xl font-roboto-mono" 
-                        id={`input-` + index}
-                        maxLength={1}
-                        autoFocus={index == 0}
-                        value={item}
-                        onKeyDown={event => handleOnKeyDown(event, index)}
-                    />
+                <div key={index} className="flex items-center gap-4">
+                    <div className={`bg-card w-[150px] h-[187px] flex items-center rounded-lg border-2 border-card focus-within:border-dark-green`}>
+                        <input
+                            type="text"
+                            className="w-full font-bold text-center text-white bg-transparent outline-none text-9xl font-roboto-mono" 
+                            id={`input-` + index}
+                            maxLength={1}
+                            autoFocus={index == 0}
+                            value={item}
+                            onKeyDown={event => handleOnKeyDown(event, index)}
+                            onChange={() => {}} // React throws an error if there's no onChange.
+                        />
+                    </div>
+
+                    {index == 1 && <span className="font-bold text-9xl text-dark-green">:</span>}
                 </div>
             ))}
-
-            <span className="order-2 font-bold text-9xl text-dark-green">:</span>
         </div>
     )
 }
