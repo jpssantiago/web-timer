@@ -19,7 +19,10 @@ export default {
         "roboto": ["Roboto", "sans-serif"]
       }
     },
-    screens: {}
+    screens: {
+      small: { max: "480px" },
+      medium: { min: "480px", max: "800px" }
+    }
   },
   plugins: [],
 }

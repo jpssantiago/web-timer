@@ -19,13 +19,26 @@ export default function Timer() {
     }
 
     return (
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center justify-between gap-4 medium:gap-4">
             {time.map((item, index) => (
-                <div key={index} className="flex items-center gap-4">
-                    <div className={`bg-card w-[150px] h-[187px] flex items-center rounded-lg border-2 border-card focus-within:border-dark-green`}>
+                <>
+                    <div 
+                        className={`
+                            bg-card 
+                            w-[150px] 
+                            h-[187px] 
+                            flex 
+                            items-center 
+                            rounded-lg 
+                            border-2 
+                            border-card 
+                            focus-within:border-dark-green
+                            medium:w-full
+                        `}
+                >
                         <input
                             type="text"
-                            className="w-full font-bold text-center text-white bg-transparent outline-none text-9xl font-roboto-mono" 
+                            className="w-full font-bold text-center text-white bg-transparent outline-none text-9xl font-roboto-mono medium:text-8xl small:text-7xl" 
                             id={`input-` + index}
                             maxLength={1}
                             autoFocus={index == 0}
@@ -35,8 +48,8 @@ export default function Timer() {
                         />
                     </div>
 
-                    {index == 1 && <span className="font-bold text-9xl text-dark-green">:</span>}
-                </div>
+                    {index == 1 && <span className="font-bold text-9xl text-dark-green medium:text-8xl small:text-8xl">:</span>}
+                </>
             ))}
         </div>
     )
